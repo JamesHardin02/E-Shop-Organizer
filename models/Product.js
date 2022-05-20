@@ -24,12 +24,8 @@ Product.init(
       type: DataTypes.DECIMAL(5,2),
       allowNull: false,
       validate: {
-        checkIfNotFloat(value) {
-          if (value % 1 === 0) {
-            throw new Error("Price must include 2 decimal places!");
-          }
-        }
-      }
+        is: /^[+]?[0-9]+\.?[0-9]*$/
+      },
     },
     stock: {
       type: DataTypes.INTEGER,
