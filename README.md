@@ -4,7 +4,7 @@
 - [Description](#description)
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [Heroku link](#heroku-link)
+- [Walkthrough](#walkthrough)
 
 ## Description 
 Organize your online store's products by categories and add tags to any items
@@ -18,4 +18,7 @@ Organize your online store's products by categories and add tags to any items
 E-Shop-Organizer example routes in API route tester Insomnia
 
 
-## Heroku-link
+## Walkthrough
+Part 1
+
+Part 2
