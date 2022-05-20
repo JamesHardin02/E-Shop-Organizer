@@ -1,5 +1,11 @@
 const { Product } = require('../models');
 
+// Each object containing properties can be seen as a row
+// and the array as a table wrapping the rows. Each property
+// being the columns of this table.
+
+// All of these rows contain product information and a foreign key 
+// which associates the product with a category 
 const productData = [
   {
     product_name: 'Plain T-Shirt',
@@ -33,6 +39,7 @@ const productData = [
   },
 ];
 
+// inserts multiple rows of products into the Product table in the database
 const seedProducts = () => Product.bulkCreate(productData);
 
 module.exports = seedProducts;

@@ -1,5 +1,13 @@
 const { ProductTag } = require('../models');
 
+// Each object containing properties can be seen as a row
+// and the array as a table wrapping the rows. Each property
+// being the columns of this table.
+
+// Each row contains two foreign keys which connect
+// a Tag and Product object together which makes ProductTag a
+// 'through table' in the Tag model's and the Product model's 
+// many to many relationship 
 const productTagData = [
   {
     product_id: 1,
@@ -51,6 +59,7 @@ const productTagData = [
   },
 ];
 
+// inserts multiple rows of foreign key pairs into the ProductTag table in the database
 const seedProductTags = () => ProductTag.bulkCreate(productTagData);
 
 module.exports = seedProductTags;
