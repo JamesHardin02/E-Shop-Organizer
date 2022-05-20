@@ -5,6 +5,8 @@ const seedProductTags = require('./product-tag-seeds');
 
 const sequelize = require('../config/connection');
 
+// Calls each seed module to insert it's data into their respective
+// models/tables aysynchronously as the squelize method is promise based
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
